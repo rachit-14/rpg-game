@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+namespace RPG.Core
 {
-    [SerializeField] Transform target;
-    public Vector3 offset;
-
-    // Update is called once per frame
-    void Update()
+    public class CameraFollow : MonoBehaviour
     {
-        transform.position = target.position + offset;
+        [SerializeField] Transform target;
+        public Vector3 offset;
+
+        // Update is called once per frame
+        void Update()
+        {
+            transform.position = target.position + offset;
+        }
     }
 }
